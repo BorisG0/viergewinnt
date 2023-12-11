@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import './App.css';
 import Field from './field';
 import React, { useState } from 'react';
@@ -12,12 +13,17 @@ function App() {
     return initialBoard;
   });
 
+  const handleButtonClick = (column) => {
+    console.log(column);
+  };
+
   return (
     <div className="App">
       <h1>Vier Gewinnt !!!</h1>
       
       {board.map((column, index) => (
         <div key={index} className="column">
+          <Button variant="contained" onClick={() => handleButtonClick(column)}>lol</Button>
           {column.map((field, index) => (
             <Field key={index} content={field}/>
           ))}
