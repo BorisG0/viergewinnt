@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 
-const Field = () => {
-    const [content, setContent] = useState(1);
-
-    const handleClick = () => {
-        setContent(content + 1);
-    };
+const Field = (props) => {
 
     return (
         <div>
-            <button onClick={handleClick}>Click me</button>
-            <div>{content}</div>
+            <div>{props.content}</div>
         </div>
     );
 };
